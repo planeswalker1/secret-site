@@ -1,0 +1,22 @@
+<% let title = 'Register · Secret'; %>
+<% include partials/header.ejs %>
+
+  <% include partials/nav.ejs %>
+  <!-- register page -->
+  <main>
+    <h1>Register!</h1>
+    <!-- register form -->
+    <form action="/register" method="POST">
+      <div>
+        <label for="username">Username: </label>
+        <input id="username" type="text" placeholder="username" name="username">
+      </div>
+      <div>
+        <label for="password">Password: </label>
+        <input id="password" type="password" placeholder="password" name="password">
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+<% include partials/footer.ejs %>
