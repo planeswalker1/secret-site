@@ -2,8 +2,13 @@
 <nav>
   <p><a href="/">Secret</a></p>
   <ul>
+  <!-- check if user is logged in to display the correct login links -->
+  <% if (!currentUser) { %>
     <li><a href="/login">Log In</a></li>
     <li><a href="/register">Register</a></li>
+  <% } else { %>
+    <li>Logged in as <%= currentUser.username %></li>
     <li><a href="/logout">Log Out</a></li>
+  <% } %>
   </ul>
 </nav>
